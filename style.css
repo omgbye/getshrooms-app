@@ -40,9 +40,9 @@ h3 { font-size:17px; }
 .app-art { width:100px; height:auto; border-radius:19px; margin-bottom:17px; }
 .download p { font-size:20px; margin:16px 0; }
 .badges { display:flex; justify-content:center; align-items:center; gap:12px; flex-wrap:wrap; }
-.badges a { display:flex; align-items:center; min-height:46px; }
-.badges img { display:block; height:46px; width:auto; }
-.badges a:last-child img { height:68px; margin:-11px; }
+.badges a { display:flex; align-items:center; min-height:56px; }
+.badges img { display:block; height:56px; width:auto; }
+.badges a:last-child img { height:82px; margin:-13px; }
 .badges { gap:22px; }
 footer { font-size:14px; }
 @media (max-width:700px) {
