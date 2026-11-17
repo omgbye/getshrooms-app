@@ -672,9 +672,31 @@ h1 em { color:var(--lime); }
   .demo-stages button { font-size:11px; }
 }
 
-.site-faq { padding-block:72px; }
-.site-faq h2 { max-width:18ch; margin-bottom:28px; }
-.site-faq details { border-top:1px solid #ffffff35; padding:18px 0; }
-.site-faq summary { cursor:pointer; font-weight:700; font-size:18px; }
-.site-faq details p { max-width:70ch; color:#d4d7c8; }
-@media(max-width:600px) { .site-faq { padding-block:46px; } footer { flex-wrap:wrap; } }
+/* === LIQUID MOCK LAYER (candidate — not live) ==============================
+   Hero goes dark-pool: WebGL liquid replaces the word wave. Copy flips to
+   paper/lime. Mobile hero tightened: smaller art, less tower. */
+.hero {
+  color: var(--paper);
+  background: radial-gradient(ellipse 90% 70% at 50% 30%, #22300a 0%, #121a05 45%, #0b0d09 100%);
+}
+.liquid-field {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  z-index: 0; pointer-events: none;
+}
+.hero .stage { position: relative; z-index: 2; }
+.hero .hero-field, .hero .dither { display: none; }
+.hero .hero-kicker { color: var(--lime); }
+.hero h1 { color: var(--paper); }
+.hero h1 em { color: var(--lime); }
+.hero .lead { color: #e9ecdd; }
+.hero .button {
+  background: var(--lime); color: #131503; border-color: transparent;
+  box-shadow: 0 10px 34px rgba(160, 220, 0, .28);
+}
+@media (max-width: 700px) {
+  .hero .stage { padding-top: 34px; padding-bottom: 8px; }
+  .hero .lead { font-size: 17px; line-height: 1.5; }
+  .opening { margin-top: 10px; }
+  .opening .art { max-width: 300px; margin-inline: auto; }
+  .opening .art img { width: 100%; height: auto; }
+}
