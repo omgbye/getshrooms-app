@@ -10,7 +10,8 @@ const ctx = canvas.getContext("2d");
 const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)");
 const finePointer = matchMedia("(hover: hover) and (pointer: fine)");
 const lime = "206, 255, 0";
-const paper = "246, 244, 237";
+const paper = "150, 165, 255";
+const cobalt = "120, 145, 255";
 
 let width = 0;
 let height = 0;
@@ -111,8 +112,8 @@ function fade(axisEnd) {
     ? ctx.createLinearGradient(0, 0, 0, height)
     : ctx.createLinearGradient(0, 0, width, 0);
   gradient.addColorStop(0, `rgba(${paper}, 0)`);
-  gradient.addColorStop(axisEnd, `rgba(${paper}, .26)`);
-  gradient.addColorStop(1 - axisEnd, `rgba(${paper}, .26)`);
+  gradient.addColorStop(axisEnd, `rgba(${paper}, .42)`);
+  gradient.addColorStop(1 - axisEnd, `rgba(${paper}, .42)`);
   gradient.addColorStop(1, `rgba(${paper}, 0)`);
   return gradient;
 }
@@ -137,7 +138,9 @@ function draw(time) {
   }
   for (const pulse of pulses) {
     const points = pulse.side === "in" ? live[pulse.line] : outputs[pulse.line].points;
-    stroke(points, pulse.t - .14, pulse.t, `rgba(${lime}, ${pulse.strength})`, pulse.lights ? 3 : 1.6);
+    const color = pulse.side === "in" ? cobalt : lime;
+    ctx.shadowColor = `rgba(${color}, .85)`;
+    stroke(points, pulse.t - .19, pulse.t, `rgba(${color}, ${pulse.strength})`, pulse.lights ? 3.2 : 2.1);
   }
   ctx.restore();
 }
@@ -146,15 +149,21 @@ function tick(now) {
   frame = 0;
   const step = Math.min(.05, lastTick ? (now - lastTick) / 1000 : 0);
   lastTick = now;
-  if (!paused && now - lastSpawn > 700 && pulses.length < 6) {
+  if (!paused && now - lastSpawn > 280 && pulses.length < 16) {
     lastSpawn = now;
-    pulses.push({ side: "in", line: Math.floor(Math.random() * inputs.length), t: 0, speed: .45 + Math.random() * .25, strength: .75 });
+    pulses.push({ side: "in", line: Math.floor(Math.random() * inputs.length), t: 0, speed: .45 + Math.random() * .25, strength: .9 });
   }
   for (const pulse of pulses) pulse.t += pulse.speed * step;
-  for (const pulse of pulses) {
-    if (pulse.side === "in" && pulse.t >= 1.14 && Math.random() < .35) {
-      pulses.push({ side: "out", line: Math.floor(Math.random() * outputs.length), t: 0, speed: .6, strength: .5 });
-    }
+  const arrivals = pulses.filter(pulse => pulse.side === "in" && pulse.t >= 1 && !pulse.transferred);
+  for (const pulse of arrivals) {
+    pulse.transferred = true;
+    pulses.push({
+      side: "out",
+      line: directions[Math.floor(Math.random() * directions.length)],
+      t: 0,
+      speed: .65,
+      strength: .85
+    });
   }
   pulses = pulses.filter(pulse => pulse.t < 1.14);
   draw(now);

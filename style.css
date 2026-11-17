@@ -700,3 +700,16 @@ h1 em { color:var(--lime); }
   .opening .art { max-width: 300px; margin-inline: auto; }
   .opening .art img { width: 100%; height: auto; }
 }
+
+.stream {
+  background:radial-gradient(ellipse at 8% 58%,#222b70 0%,transparent 47%),
+             radial-gradient(ellipse at 91% 62%,#354210 0%,transparent 42%),
+             #0b0d16;
+}
+.stream-device { filter:drop-shadow(0 28px 45px #0009); }
+@media(max-width:759px) {
+  .stream {
+    background:radial-gradient(ellipse at 50% 29%,#222b70 0%,transparent 40%),
+               radial-gradient(ellipse at 50% 78%,#354210 0%,transparent 36%),#0b0d16;
+  }
+}
