@@ -671,3 +671,10 @@ h1 em { color:var(--lime); }
   .phone-demo h3 { font-size:22px; }
   .demo-stages button { font-size:11px; }
 }
+
+.site-faq { padding-block:72px; }
+.site-faq h2 { max-width:18ch; margin-bottom:28px; }
+.site-faq details { border-top:1px solid #ffffff35; padding:18px 0; }
+.site-faq summary { cursor:pointer; font-weight:700; font-size:18px; }
+.site-faq details p { max-width:70ch; color:#d4d7c8; }
+@media(max-width:600px) { .site-faq { padding-block:46px; } footer { flex-wrap:wrap; } }

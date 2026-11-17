@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://getshrooms.app/sitemap.xml
