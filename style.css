@@ -754,3 +754,9 @@ h3 { letter-spacing:-.025em; }
 @media(max-width:759px) {
   .neural-field { mask-image:radial-gradient(ellipse 42% 30% at 53% 69%,#0001 12%,#0007 65%,#000 100%); }
 }
+
+.mushroom-experiment { position:relative; background:#080d0c; overflow:hidden; }
+.mushroom-field { display:block; width:100%; height:clamp(560px,62vw,760px); }
+.garden-caption { position:absolute; top:34px; left:4.5%; right:4.5%; pointer-events:none; }
+.garden-caption p { color:#ceff00; font-size:11px; letter-spacing:.15em; }
+.garden-caption h2 { font-size:clamp(26px,4vw,48px); color:#e6eee8; }
