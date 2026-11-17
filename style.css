@@ -734,3 +734,23 @@ h1 em { color:var(--lime); }
 @media(max-width:759px) {
   .neural-field { mask-image:radial-gradient(ellipse 39% 28% at 53% 69%,#0001 10%,#0006 55%,#000 95%); }
 }
+
+body { font-family:"Instrument Sans",sans-serif; }
+h1,h2,h3,.wordmark {
+  font-family:"Space Grotesk",sans-serif;
+  font-weight:600;
+}
+h1,.hero h1 { letter-spacing:-.055em; line-height:1.04; }
+h2 { letter-spacing:-.045em; line-height:1.07; }
+h3 { letter-spacing:-.025em; }
+.hero .hero-kicker { letter-spacing:.14em; font-weight:600; }
+.hero .lead { line-height:1.55; }
+.orbit::after { display:none; }
+.art::before,.art::after { display:none; }
+.neural-field {
+  opacity:.85;
+  mask-image:radial-gradient(ellipse 28% 48% at 77% 48%,#0001 12%,#0006 50%,#000 90%);
+}
+@media(max-width:759px) {
+  .neural-field { mask-image:radial-gradient(ellipse 42% 30% at 53% 69%,#0001 12%,#0007 65%,#000 100%); }
+}
