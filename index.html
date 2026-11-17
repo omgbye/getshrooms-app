@@ -21,32 +21,33 @@
 <link rel="icon" href="assets/shrooms.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=20261117-mobile">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=20261117-signals">
 <script src="dither.js" defer></script>
-<script src="liquid.js" defer></script>
-<script src="stream.js" defer></script>
+<script src="neural-tunnel.js?v=2" defer></script>
+<script src="stream.js?v=20261117-theatre" defer></script>
 <script src="phone-demo.js" defer></script>
+<script src="mushroom-field.js?v=2" defer></script>
 </head>
 <body>
 <header class="shell">
 <a class="wordmark" href="./">SHROOMS</a>
-<nav aria-label="Main"><a href="#preview">Inside the app</a><a class="reviews-nav" href="#reviews">Perspectives</a><a class="store-link" href="#download">Get the app ↘</a></nav>
+<nav aria-label="Main"><a href="#preview">Inside the app</a><a class="reviews-nav" href="#reviews">Perspectives</a><a class="store-link" href="#download">Get the app </a></nav>
 </header>
 <main>
 <section class="hero" aria-labelledby="headline">
 <div class="hero-field" aria-hidden="true"><i></i><i></i><i></i></div>
-<canvas class="liquid-field" aria-hidden="true"></canvas>
+<canvas class="neural-field" aria-hidden="true"></canvas>
 <canvas class="dither" aria-hidden="true"></canvas>
 <div class="shell stage">
 <div class="hero-copy">
 <p class="hero-kicker vapor-heading">Technology as Spirituality</p>
 <h1 id="headline"><span>Who taught you</span><em>what to want?</em></h1>
 <p class="lead">Explore what you’ve never thought to want. SHROOMS brings an AI guide into a personal exploration of your interests and values, opening three directions you can try in real life.</p>
-<a class="button" href="#preview">See how it works <span aria-hidden="true">↓</span></a>
+<a class="button" href="#preview">See how it works <span aria-hidden="true"></span></a>
 </div>
 <div class="opening">
-<div class="art"><div class="orbit" aria-hidden="true"></div><img src="assets/shrooms.png" width="889" height="950" alt="Glacier-blue mushroom with SHROOMS lettering curled into its stem"></div>
+<div class="art"><img src="assets/shrooms.png" width="889" height="950" alt="Glacier-blue mushroom with SHROOMS lettering curled into its stem"></div>
 <div class="sequence" aria-hidden="true">
 <div class="sequence-diagram"><div class="sequence-axis"></div><i></i><i></i><i></i></div>
 <div class="sequence-copy"><span></span><strong></strong></div>
@@ -82,7 +83,7 @@
 <label><input type="radio" name="demo-interest" value="1"> Making something from scratch</label>
 <label><input type="radio" name="demo-interest" value="2"> Helping someone solve a problem</label>
 </fieldset>
-<button class="demo-next" type="button" disabled>See the sample Reveal →</button>
+<button class="demo-next" type="button" disabled>See the sample Reveal </button>
 </section>
 <section id="demo-reveal" hidden>
 <p>A sample result from the app.</p>
@@ -108,7 +109,7 @@
 <section class="social-proof-16" id="reviews" aria-labelledby="sp16-quote-text">
 <div class="shell sp16-container">
 <div class="sp16-featured">
-<div class="sp16-tag"><span>★ ★ ★ ★ ★</span> <span>TESTER PERSPECTIVES</span></div>
+<div class="sp16-tag"><span>    </span> <span>TESTER PERSPECTIVES</span></div>
 <blockquote class="sp16-quote" id="sp16-quote-text">
 “I spent three years convinced I had to climb a ladder I hated. One session in SHROOMS and I realized I wasn’t broken—I was just running someone else’s script.”
 </blockquote>
@@ -164,6 +165,10 @@
 </div>
 </div>
 </section>
+<section class="mushroom-experiment" aria-label="Experimental SHROOMS circuit garden">
+<canvas class="mushroom-field" role="img" aria-label="A low view through digital grass toward a glacier-blue mushroom formed from circuit lines and points, with an eye in its gills."></canvas>
+<div class="garden-caption"><p>TECHNOLOGY AS SPIRITUALITY</p><h2>Something is taking shape.</h2></div>
+</section>
 <section class="download" id="download" aria-labelledby="download-title">
 <div class="shell">
 <img class="app-art" src="assets/launch-art.jpg" width="1139" height="1134" loading="lazy" alt="SHROOMS app icon: blue mushroom on a bright lime square">
@@ -179,6 +184,6 @@
 </div>
 </section>
 </main>
-<footer class="shell"><a class="wordmark" href="./"><img src="assets/shrooms.png" alt="">SHROOMS</a><a href="#headline">Back to top ↑</a></footer>
+<footer class="shell"><a class="wordmark" href="./"><img src="assets/shrooms.png" alt="">SHROOMS</a><a href="#headline">Back to top </a></footer>
 </body>
 </html>
