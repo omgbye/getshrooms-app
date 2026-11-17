@@ -52,7 +52,7 @@
     for (let row = -22; row <= 11; row++) {
       for (let col = -29; col <= 29; col++) {
         const phase = random(row * 89 + col) * 6.28;
-        const alpha = .22 + .48 * (.5 + .5 * Math.sin(time * .8 + phase));
+        const alpha = .18 + .65 * Math.pow(.5 + .5 * Math.sin(time * 1.5 + phase + col * .12), 3);
         ctx.fillStyle = `rgba(150,220,255,${alpha})`;
         ctx.fillRect(col * 10, row * 10, 1.8, 1.8);
       }
@@ -87,6 +87,50 @@
     ctx.save(); ctx.translate(-32, 265); ctx.rotate(-1.15);
     ctx.fillText("SHROOMS", 0, 0); ctx.restore();
     ctx.restore();
+
+    // Tracking boxes follow live signals around the mushroom and grass.
+    for (let i = 0; i < 5; i++) {
+      const x = width * (.14 + i * .17) + Math.sin(time * .32 + i * 1.7) * width * .035;
+      const y = height * (.32 + (i % 3) * .15) + Math.cos(time * .28 + i) * 18;
+      const box = width < 600 ? 22 : 34;
+      const corner = 7;
+      ctx.strokeStyle = i % 2 ? "#a8dbff80" : "#ceff0080";
+      ctx.lineWidth = 1;
+      for (const [dx, dy] of [[-1,-1],[1,-1],[-1,1],[1,1]]) {
+        ctx.beginPath();
+        ctx.moveTo(x + dx * box, y + dy * (box - corner));
+        ctx.lineTo(x + dx * box, y + dy * box);
+        ctx.lineTo(x + dx * (box - corner), y + dy * box);
+        ctx.stroke();
+      }
+      ctx.beginPath();
+      ctx.moveTo(x + box, y);
+      ctx.lineTo(width * .55, height * .53);
+      ctx.strokeStyle = "#a8dbff20"; ctx.stroke();
+      ctx.fillStyle = "#b4d6ca90";
+      ctx.font = '9px "Instrument Sans", sans-serif';
+      ctx.fillText("SIGNAL " + String(i + 1).padStart(2, "0"), x - box, y + box + 13);
+    }
+
+    // A slow scan travels through the field and lights nearby matrix points.
+    const scanY = height * (.24 + ((time * .07) % 1) * .62);
+    const scan = ctx.createLinearGradient(0, scanY - 30, 0, scanY + 30);
+    scan.addColorStop(0, "#ceff0000");
+    scan.addColorStop(.5, "#ceff0014");
+    scan.addColorStop(1, "#ceff0000");
+    ctx.fillStyle = scan;
+    ctx.fillRect(0, scanY - 30, width, 60);
+    ctx.strokeStyle = "#b9e9ff45";
+    ctx.beginPath(); ctx.moveTo(0, scanY); ctx.lineTo(width, scanY); ctx.stroke();
+
+    for (let i = 0; i < 32; i++) {
+      const travel = (time * .085 + random(i + 900)) % 1;
+      const startX = random(i + 800) * width;
+      const x = startX + (width * .55 - startX) * travel;
+      const y = height - travel * height * .49;
+      ctx.fillStyle = i % 3 ? "#ceff0080" : "#a8dbffb0";
+      ctx.fillRect(x, y, 2, 2);
+    }
 
     // Fine grass in the middle distance and large blades in the foreground.
     for (let i = 0; i < 125; i++) {

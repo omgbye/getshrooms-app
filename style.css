@@ -760,3 +760,10 @@ h3 { letter-spacing:-.025em; }
 .garden-caption { position:absolute; top:34px; left:4.5%; right:4.5%; pointer-events:none; }
 .garden-caption p { color:#ceff00; font-size:11px; letter-spacing:.15em; }
 .garden-caption h2 { font-size:clamp(26px,4vw,48px); color:#e6eee8; }
+
+.garden-caption h2 { color:#b8c9bb; font-weight:500; text-shadow:0 2px 18px #080d0c; }
+.garden-caption p { color:#b5d570; }
+.garden-caption {
+  padding-bottom:24px;
+  background:linear-gradient(180deg,#080d0cb3,transparent);
+}
