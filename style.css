@@ -767,3 +767,23 @@ h3 { letter-spacing:-.025em; }
   padding-bottom:24px;
   background:linear-gradient(180deg,#080d0cb3,transparent);
 }
+
+.hero h1 {
+  font-family:"Archivo Black",sans-serif;
+  font-weight:400;
+  color:#14200c;
+  text-shadow:0 2px 0 #e8ffb6,0 4px 18px #e3ffb899;
+}
+.hero h1 em {
+  color:#2635a5;
+  text-shadow:0 2px 0 #eeffd3,0 4px 18px #e3ffb899;
+}
+.garden-caption h2 { max-width:24ch; line-height:1.08; }
+.garden-caption .garden-thought {
+  max-width:43ch;
+  color:#c5d2c4;
+  font-size:clamp(13px,1.4vw,17px);
+  letter-spacing:0;
+  line-height:1.5;
+  text-shadow:0 2px 12px #080d0c;
+}
