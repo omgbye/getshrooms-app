@@ -107,7 +107,7 @@
       ctx.strokeStyle = "#a8dbff20"; ctx.stroke();
       ctx.fillStyle = "#b4d6ca90";
       ctx.font = '9px "Instrument Sans", sans-serif';
-      ctx.fillText("SIGNAL " + String(i + 1).padStart(2, "0"), x - box, y + box + 13);
+      ctx.fillText(["YOUR ANSWERS", "REAL-WORLD DATA", "THREE POSSIBILITIES", "YOUR PLAN", "TAKE ACTION"][i], x - box, y + box + 13);
     }
 
     // A slow scan travels through the field and lights nearby matrix points.
@@ -146,9 +146,10 @@
       }
     }
     ctx.font = `500 ${width < 600 ? 9 : 11}px "Instrument Sans", sans-serif`;
-    const words = ["CURIOSITY", "POSSIBILITY", "PAY ATTENTION", "IMAGINATION"];
+    const words = ["YOUR ANSWERS", "REAL DATA", "POSSIBILITY", "EXECUTION"];
     words.forEach((word, i) => {
-      const x = width * (.06 + i * .235), y = height * (.34 + (i % 2) * .29);
+      const x = width * (.06 + i * .235) + Math.sin(time * .24 + i) * 9;
+      const y = height * (.34 + (i % 2) * .29) + Math.cos(time * .3 + i) * 7;
       ctx.fillStyle = i % 2 ? "#a9dfff9c" : "#ceff009c";
       ctx.fillText(word, x, y);
       ctx.strokeStyle = "#a9dfff38";
