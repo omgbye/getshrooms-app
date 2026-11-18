@@ -802,3 +802,11 @@ body { padding-bottom:92px; }
 .hero h1 { color:#17200d; font-family:"Space Grotesk",sans-serif; font-weight:600; text-shadow:none; }
 .hero h1 em { color:#2535ad; text-shadow:none; }
 .hero .button { background:#17200d; color:#f6f4ed; }
+
+/* Mobile hero order (owner direction, 2026-11-18): on phones the headline
+   comes first and the mushroom sits UNDER "Who taught you what to want?" */
+@media (max-width:700px) {
+  .stage { grid-template-columns:1fr !important; }
+  .stage .hero-copy { order:1; }
+  .stage .opening { order:2; justify-self:center; }
+}
