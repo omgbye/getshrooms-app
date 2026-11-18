@@ -810,3 +810,17 @@ body { padding-bottom:92px; }
   .stage .hero-copy { order:1; }
   .stage .opening { order:2; justify-self:center; }
 }
+
+/* Mobile hero refinement (owner direction, 2026-11-18): the mushroom sits
+   between the headline and the "Everyone has an opinion" lead line, and the
+   top "Get the app" call-to-action is hidden on phones (kept on desktop). */
+@media (max-width:700px) {
+  .stage { display:flex; flex-direction:column; }
+  .hero-copy { display:contents; }
+  .stage .hero-kicker { order:1; }
+  .stage h1 { order:2; }
+  .stage .opening { order:3; align-self:center; width:100%; }
+  .stage .lead { order:4; }
+  .stage .button { order:5; align-self:flex-start; }
+  header nav .store-link { display:none; }
+}
