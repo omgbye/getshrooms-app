@@ -768,16 +768,6 @@ h3 { letter-spacing:-.025em; }
   background:linear-gradient(180deg,#080d0cb3,transparent);
 }
 
-.hero h1 {
-  font-family:"Archivo Black",sans-serif;
-  font-weight:400;
-  color:#14200c;
-  text-shadow:0 2px 0 #e8ffb6,0 4px 18px #e3ffb899;
-}
-.hero h1 em {
-  color:#2635a5;
-  text-shadow:0 2px 0 #eeffd3,0 4px 18px #e3ffb899;
-}
 .garden-caption h2 { max-width:24ch; line-height:1.08; }
 .garden-caption .garden-thought {
   max-width:43ch;
@@ -801,14 +791,14 @@ body { padding-bottom:92px; }
 }
 .download-status { color:#d3decb; font-size:12px; }
 @media(max-width:759px) {
-  .hero .hero-copy { display:contents; }
-  .hero .stage { display:grid; grid-template-columns:minmax(0,1fr); gap:15px; }
-  .hero-kicker { grid-row:1; margin:0; }
-  .hero h1 { grid-row:2; }
-  .hero .opening { grid-row:3; width:100%; }
-  .hero .lead { grid-row:4; margin:0; }
-  .hero .hero-copy>.button { grid-row:5; justify-self:start; }
-  .hero .art img { width:min(76%,310px); }
+  .hero .stage { grid-template-columns:minmax(0,1fr); gap:20px; }
+  .hero .art img { width:min(86%,340px); }
   .floating-download { left:4%; right:4%; justify-content:space-between; gap:8px; }
   .floating-download a { padding:12px 16px; }
 }
+.hero { background:#ceff00; color:#17200d; }
+.hero .lead { color:#20270d; }
+.hero .hero-kicker { color:#28359f; }
+.hero h1 { color:#17200d; font-family:"Space Grotesk",sans-serif; font-weight:600; text-shadow:none; }
+.hero h1 em { color:#2535ad; text-shadow:none; }
+.hero .button { background:#17200d; color:#f6f4ed; }

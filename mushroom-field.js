@@ -84,6 +84,8 @@
 
 
 
+    ctx.restore();
+
     // Tracking boxes follow live signals around the mushroom and grass.
     for (let i = 0; i < 5; i++) {
       const x = width * (.14 + i * .17) + Math.sin(time * .32 + i * 1.7) * width * .035;
