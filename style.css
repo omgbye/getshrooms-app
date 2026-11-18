@@ -787,3 +787,28 @@ h3 { letter-spacing:-.025em; }
   line-height:1.5;
   text-shadow:0 2px 12px #080d0c;
 }
+
+body { padding-bottom:92px; }
+.floating-download {
+  position:fixed; bottom:max(16px,env(safe-area-inset-bottom)); right:4%;
+  z-index:20; display:flex; align-items:center; gap:12px;
+  padding:8px 8px 8px 17px; border:1px solid #ceff0040;
+  border-radius:40px; background:#101910ed; box-shadow:0 7px 26px #0005;
+}
+.floating-download a {
+  display:block; background:#ceff00; color:#17200d; border-radius:30px;
+  padding:12px 20px; font-weight:700; text-decoration:none;
+}
+.download-status { color:#d3decb; font-size:12px; }
+@media(max-width:759px) {
+  .hero .hero-copy { display:contents; }
+  .hero .stage { display:grid; grid-template-columns:minmax(0,1fr); gap:15px; }
+  .hero-kicker { grid-row:1; margin:0; }
+  .hero h1 { grid-row:2; }
+  .hero .opening { grid-row:3; width:100%; }
+  .hero .lead { grid-row:4; margin:0; }
+  .hero .hero-copy>.button { grid-row:5; justify-self:start; }
+  .hero .art img { width:min(76%,310px); }
+  .floating-download { left:4%; right:4%; justify-content:space-between; gap:8px; }
+  .floating-download a { padding:12px 16px; }
+}

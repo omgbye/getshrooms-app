@@ -82,11 +82,7 @@
     ctx.beginPath(); ctx.arc(18, 63, 5, 0, Math.PI * 2);
     ctx.fillStyle = "#ceff00"; ctx.fill();
 
-    ctx.font = '600 13px "Instrument Sans", sans-serif';
-    ctx.fillStyle = "#ceff00b0";
-    ctx.save(); ctx.translate(-32, 265); ctx.rotate(-1.15);
-    ctx.fillText("SHROOMS", 0, 0); ctx.restore();
-    ctx.restore();
+
 
     // Tracking boxes follow live signals around the mushroom and grass.
     for (let i = 0; i < 5; i++) {
