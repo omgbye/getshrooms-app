@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="The Spore Print — the SHROOMS application and data blog. Notes on wanting, working, and becoming, from the engineer building an AI-powered cognitive, career & lifestyle architecture engine.">
+<meta name="description" content="The Spore Print, the SHROOMS application and data blog. Notes on wanting, working, and becoming, from the engineer building an AI-powered cognitive, career & lifestyle architecture engine.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://getshrooms.app/blog/">
 <meta property="og:title" content="The Spore Print | SHROOMS Application and Data Blog">
-<meta property="og:description" content="The SHROOMS application and data blog — notes on wanting, working, and becoming, by Angel Reyes.">
+<meta property="og:description" content="The SHROOMS application and data blog, notes on wanting, working, and becoming, by Angel Reyes.">
 <meta property="og:image" content="https://getshrooms.app/assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The Spore Print | SHROOMS Application and Data Blog">
-<meta name="twitter:description" content="The SHROOMS application and data blog — notes on wanting, working, and becoming, by Angel Reyes.">
+<meta name="twitter:description" content="The SHROOMS application and data blog, notes on wanting, working, and becoming, by Angel Reyes.">
 <meta name="twitter:image" content="https://getshrooms.app/assets/og-image.png">
 <meta name="theme-color" content="#ffffff">
 <title>The Spore Print | SHROOMS Application and Data Blog</title>
@@ -21,43 +21,43 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../style.css?v=20261117-execution">
 <style>
-  :root { color-scheme: light dark; --bg:#fbfbf8; --fg:#0e0f0c; --muted:#55584f; --line:#e4e2d8; --accent:#141cdd; --card:#ffffff; }
-  @media (prefers-color-scheme: dark) { :root { --bg:#0c0d0a; --fg:#f6f4ed; --muted:#b9b7ac; --line:#f6f4ed24; --accent:#ceff00; --card:#12130e; } }
-  body { background:var(--bg); color:var(--fg); font-family:"Inter",sans-serif; }
-  .spore-hero { position:relative; overflow:hidden; border-bottom:1px solid var(--line);
-    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
-    background-size:54px 54px; background-position:center top; }
-  .spore-wave { position:absolute; inset:0; z-index:0; pointer-events:none; opacity:.55; }
-  .spore-stage { position:relative; z-index:1; display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:end; gap:clamp(24px,5vw,64px); padding:clamp(52px,8vw,104px) 0 clamp(40px,6vw,72px); }
-  .spore-kicker { display:flex; align-items:center; gap:10px; font-family:"Space Grotesk",sans-serif; font-size:12px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin:0 0 22px; }
-  .spore-kicker::before { content:""; width:9px; height:9px; border-radius:2px; background:var(--lime); box-shadow:0 0 0 1px #0e0f0c22; }
-  .spore-hero h1 { font-family:"Space Grotesk",sans-serif; font-weight:700; font-size:clamp(52px,9vw,110px); line-height:.96; letter-spacing:-.03em; margin:0 0 24px; }
-  .spore-lead { max-width:58ch; font-size:clamp(16px,1.9vw,19.5px); line-height:1.65; color:var(--muted); margin:0 0 28px; }
-  .spore-meta { display:flex; flex-wrap:wrap; gap:8px; }
-  .spore-meta span { font-family:"Space Grotesk",sans-serif; font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; border:1px solid var(--line); border-radius:100px; padding:7px 13px; background:var(--card); }
-  .app-tile { width:clamp(104px,14vw,168px); aspect-ratio:1; border-radius:24%; background:var(--lime); display:grid; place-items:center; box-shadow:0 24px 44px #1c2a0026, inset 0 0 0 1px #0e0f0c14; }
-  .app-tile img { width:82%; height:auto; transform:rotate(-6deg); }
-  .post-grid { padding:clamp(40px,6vw,72px) 0 clamp(64px,9vw,110px); display:grid; gap:18px; }
-  .post-card { display:block; text-decoration:none; background:var(--card); color:var(--fg); border:1px solid var(--line); border-radius:18px; padding:clamp(24px,3.4vw,40px); transition:border-color .18s ease, transform .18s ease, box-shadow .18s ease; }
-  a.post-card:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 18px 36px #0e0f0c12; }
-  .post-card .post-tag { display:inline-block; font-family:"Space Grotesk",sans-serif; font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); border:1px solid var(--line); border-radius:100px; padding:6px 12px; margin-bottom:18px; }
-  .post-card h2 { font-family:"Space Grotesk",sans-serif; font-weight:700; letter-spacing:-.015em; font-size:clamp(26px,3.6vw,40px); line-height:1.12; margin:0 0 12px; }
-  .post-card p { max-width:62ch; margin:0 0 18px; line-height:1.65; color:var(--muted); font-size:16.5px; }
-  .post-card .post-meta { font-family:"Space Grotesk",sans-serif; font-size:12px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:0 0 16px; }
-  .post-card .read { font-weight:700; font-size:14.5px; color:var(--accent); }
-  @media (max-width:700px) { .spore-stage { grid-template-columns:1fr; align-items:start; } .app-tile { width:96px; } }
+ :root { color-scheme: light dark; --bg:#fbfbf8; --fg:#0e0f0c; --muted:#55584f; --line:#e4e2d8; --accent:#141cdd; --card:#ffffff; }
+ @media (prefers-color-scheme: dark) { :root { --bg:#0c0d0a; --fg:#f6f4ed; --muted:#b9b7ac; --line:#f6f4ed24; --accent:#ceff00; --card:#12130e; } }
+ body { background:var(--bg); color:var(--fg); font-family:"Inter",sans-serif; }
+ .spore-hero { position:relative; overflow:hidden; border-bottom:1px solid var(--line);
+ background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+ background-size:54px 54px; background-position:center top; }
+ .spore-wave { position:absolute; inset:0; z-index:0; pointer-events:none; opacity:.55; }
+ .spore-stage { position:relative; z-index:1; display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:end; gap:clamp(24px,5vw,64px); padding:clamp(52px,8vw,104px) 0 clamp(40px,6vw,72px); }
+ .spore-kicker { display:flex; align-items:center; gap:10px; font-family:"Space Grotesk",sans-serif; font-size:12px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin:0 0 22px; }
+ .spore-kicker::before { content:""; width:9px; height:9px; border-radius:2px; background:var(--lime); box-shadow:0 0 0 1px #0e0f0c22; }
+ .spore-hero h1 { font-family:"Space Grotesk",sans-serif; font-weight:700; font-size:clamp(52px,9vw,110px); line-height:.96; letter-spacing:-.03em; margin:0 0 24px; }
+ .spore-lead { max-width:58ch; font-size:clamp(16px,1.9vw,19.5px); line-height:1.65; color:var(--muted); margin:0 0 28px; }
+ .spore-meta { display:flex; flex-wrap:wrap; gap:8px; }
+ .spore-meta span { font-family:"Space Grotesk",sans-serif; font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; border:1px solid var(--line); border-radius:100px; padding:7px 13px; background:var(--card); }
+ .app-tile { width:clamp(104px,14vw,168px); aspect-ratio:1; border-radius:24%; background:var(--lime); display:grid; place-items:center; box-shadow:0 24px 44px #1c2a0026, inset 0 0 0 1px #0e0f0c14; }
+ .app-tile img { width:82%; height:auto; transform:rotate(-6deg); }
+ .post-grid { padding:clamp(40px,6vw,72px) 0 clamp(64px,9vw,110px); display:grid; gap:18px; }
+ .post-card { display:block; text-decoration:none; background:var(--card); color:var(--fg); border:1px solid var(--line); border-radius:18px; padding:clamp(24px,3.4vw,40px); transition:border-color .18s ease, transform .18s ease, box-shadow .18s ease; }
+ a.post-card:hover { border-color:var(--accent); transform:translateY(-2px); box-shadow:0 18px 36px #0e0f0c12; }
+ .post-card .post-tag { display:inline-block; font-family:"Space Grotesk",sans-serif; font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); border:1px solid var(--line); border-radius:100px; padding:6px 12px; margin-bottom:18px; }
+ .post-card h2 { font-family:"Space Grotesk",sans-serif; font-weight:700; letter-spacing:-.015em; font-size:clamp(26px,3.6vw,40px); line-height:1.12; margin:0 0 12px; }
+ .post-card p { max-width:62ch; margin:0 0 18px; line-height:1.65; color:var(--muted); font-size:16.5px; }
+ .post-card .post-meta { font-family:"Space Grotesk",sans-serif; font-size:12px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:0 0 16px; }
+ .post-card .read { font-weight:700; font-size:14.5px; color:var(--accent); }
+ @media (max-width:700px) { .spore-stage { grid-template-columns:1fr; align-items:start; } .app-tile { width:96px; } }
 
-  .masthead { display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; border-bottom:1px solid var(--line); padding:12px 0; font-family:"Space Grotesk",sans-serif; font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
-  .post-row2 { display:grid; grid-template-columns:52px 104px minmax(0,1fr) auto; gap:clamp(14px,3vw,32px); align-items:start; text-decoration:none; color:var(--fg); border-top:1px solid var(--line); padding:26px 0; }
-  .post-row2:last-child { border-bottom:1px solid var(--line); }
-  .post-row2 .idx, .post-row2 .rdate { font-family:"Space Grotesk",sans-serif; font-size:12px; font-weight:600; letter-spacing:.1em; color:var(--muted); padding-top:8px; white-space:nowrap; }
-  .post-row2 .rtag { display:block; font-family:"Space Grotesk",sans-serif; font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; }
-  .post-row2 h2 { font-family:"Space Grotesk",sans-serif; font-weight:700; letter-spacing:-.015em; font-size:clamp(22px,3vw,32px); line-height:1.15; margin:0 0 8px; }
-  .post-row2 p { max-width:62ch; margin:0; line-height:1.6; color:var(--muted); font-size:15.5px; }
-  .post-row2 .go { font-weight:700; font-size:14px; color:var(--accent); padding-top:8px; white-space:nowrap; }
-  a.post-row2:hover h2 { color:var(--accent); }
-  .colophon { display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; border-top:1px solid var(--line); padding:16px 0 0; font-family:"Space Grotesk",sans-serif; font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
-  @media (max-width:700px) { .post-row2 { grid-template-columns:44px minmax(0,1fr) auto; } .post-row2 .rdate { display:none; } .masthead span:last-child { display:none; } }
+ .masthead { display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; border-bottom:1px solid var(--line); padding:12px 0; font-family:"Space Grotesk",sans-serif; font-size:11px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); }
+ .post-row2 { display:grid; grid-template-columns:52px 104px minmax(0,1fr) auto; gap:clamp(14px,3vw,32px); align-items:start; text-decoration:none; color:var(--fg); border-top:1px solid var(--line); padding:26px 0; }
+ .post-row2:last-child { border-bottom:1px solid var(--line); }
+ .post-row2 .idx, .post-row2 .rdate { font-family:"Space Grotesk",sans-serif; font-size:12px; font-weight:600; letter-spacing:.1em; color:var(--muted); padding-top:8px; white-space:nowrap; }
+ .post-row2 .rtag { display:block; font-family:"Space Grotesk",sans-serif; font-size:11px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--accent); margin-bottom:8px; }
+ .post-row2 h2 { font-family:"Space Grotesk",sans-serif; font-weight:700; letter-spacing:-.015em; font-size:clamp(22px,3vw,32px); line-height:1.15; margin:0 0 8px; }
+ .post-row2 p { max-width:62ch; margin:0; line-height:1.6; color:var(--muted); font-size:15.5px; }
+ .post-row2 .go { font-weight:700; font-size:14px; color:var(--accent); padding-top:8px; white-space:nowrap; }
+ a.post-row2:hover h2 { color:var(--accent); }
+ .colophon { display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; border-top:1px solid var(--line); padding:16px 0 0; font-family:"Space Grotesk",sans-serif; font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+ @media (max-width:700px) { .post-row2 { grid-template-columns:44px minmax(0,1fr) auto; } .post-row2 .rdate { display:none; } .masthead span:last-child { display:none; } }
 </style>
 </head>
 <body>
@@ -76,7 +76,7 @@
 <p class="spore-lead">An AI-powered cognitive, career &amp; lifestyle architecture engine. Input 83 behavioral data points to map your internal wiring, optimize your daily habits, and simulate your highest-probability path.</p>
 <div class="spore-meta"><span>By Angel Reyes</span><span>Est. 2026</span><span>Beta era</span></div>
 </div>
-<div class="app-tile"><img src="../assets/shrooms.png" alt="SHROOMS app icon — glacier-blue mushroom"></div>
+<div class="app-tile"><img src="../assets/shrooms.png" alt="SHROOMS app icon, glacier-blue mushroom"></div>
 </div>
 </section>
 <section class="post-grid shell" aria-label="Articles">
@@ -89,7 +89,7 @@
 <a class="post-row2" href="turning-a-mushroom-into-software.html">
 <span class="idx">002</span>
 <span class="rdate">Nov 17, 2026</span>
-<span class="rmain"><span class="rtag">The Engineering</span><h2>Turning a Mushroom Into Software</h2><p>What began as a whimsical concept became an engineering problem: translating mycelium — a network of interconnected filaments — into software.</p></span>
+<span class="rmain"><span class="rtag">The Engineering</span><h2>Turning a Mushroom Into Software</h2><p>What began as a whimsical concept became an engineering problem: translating mycelium, a network of interconnected filaments, into software.</p></span>
 <span class="go">Read ↗</span>
 </a>
 <a class="post-row2" href="technology-should-create-insight-not-dependency.html">
