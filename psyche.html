@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Psyche! · from SHROOMS</title>
+<meta name="description" content="Five quick choices. Can your friends guess yours?">
+<meta property="og:title" content="Psyche! · SHROOMS">
+<meta property="og:description" content="Five quick choices. Can you guess how your friend chose?">
+<meta name="theme-color" content="#e8e8e4">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet">
+<style>
+  /* Psyche! (Angel, Nov 23). No server, no tracking: a friend's picks arrive in the link after "#",
+     which browsers never send to a server. Same five-a-day logic as src/lib/psyche.ts.
+     Its own look, like the Calling Card: light, a lime door and a black door, the logo. */
+  :root { --lime:#d8f54a; --ink:#0b0b0c; --bg:#e8e8e4; --chip:#f6f6f3; --soft:rgba(11,11,12,.5); --line:rgba(11,11,12,.1); }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { -webkit-text-size-adjust:100%; }
+  body { background:var(--bg); color:var(--ink); font-family:"Outfit",system-ui,sans-serif; min-height:100dvh;
+         padding:max(18px, env(safe-area-inset-top)) 16px max(28px, env(safe-area-inset-bottom)); }
+  main { max-width:520px; margin:0 auto; display:flex; flex-direction:column; gap:18px; min-height:calc(100dvh - 46px); }
+  .mono { font-family:"Space Mono",monospace; font-size:11px; letter-spacing:.18em; text-transform:uppercase; }
+  .soft { color:var(--soft); }
+  header { display:flex; justify-content:space-between; align-items:center; gap:10px; }
+  header .mono { white-space:nowrap; }
+  @media (max-width:360px) { header .chip { display:none; } }
+  .chip { background:var(--chip); border-radius:999px; padding:9px 14px; }
+  .bar { display:flex; gap:6px; }
+  .bar i { flex:1; height:4px; border-radius:2px; background:rgba(11,11,12,.12); }
+  .bar i.on { background:var(--ink); }
+  #play { flex:1; display:flex; flex-direction:column; justify-content:flex-end; gap:16px; }
+  .num { display:flex; align-items:baseline; gap:6px; }
+  .num b { font-weight:500; font-size:64px; line-height:1; letter-spacing:-.05em; }
+  .num span { font-size:18px; color:var(--soft); }
+  .ask { display:inline-flex; align-self:flex-start; gap:8px; align-items:center; background:var(--ink); color:#fff; border-radius:999px; padding:8px 14px; font-size:14px; font-weight:500; }
+  .ask i { width:8px; height:8px; border-radius:4px; background:var(--lime); }
+  h1 { font-weight:500; font-size:30px; line-height:1.17; letter-spacing:-.03em; }
+  .doors { display:grid; gap:10px; margin-top:6px; }
+  .door { appearance:none; border:0; text-align:left; min-height:118px; border-radius:30px; padding:20px; font:inherit; cursor:pointer;
+          display:flex; flex-direction:column; justify-content:space-between; gap:12px; -webkit-tap-highlight-color:transparent; touch-action:manipulation; transition:transform .12s ease-out; }
+  .door:active { transform:scale(.98); }
+  .door .top { display:flex; justify-content:space-between; align-items:center; }
+  .door .go { width:40px; height:40px; border-radius:20px; display:grid; place-items:center; }
+  .door .label { font-size:24px; font-weight:500; line-height:1.17; letter-spacing:-.025em; }
+  .door.a { background:var(--lime); color:var(--ink); } .door.a .go { background:var(--ink); color:var(--lime); }
+  .door.b { background:var(--ink); color:#fff; } .door.b .go { background:var(--lime); color:var(--ink); }
+  .card { background:var(--bg); border:1px solid var(--line); border-radius:30px; padding:14px; display:flex; flex-direction:column; gap:12px; }
+  .card header { padding-left:6px; }
+  .tilt { position:relative; transform:rotate(-3deg); margin:16px 2px 4px; }
+  .tile { background:var(--lime); border-radius:28px; padding:54% 20px 20px; min-height:300px; display:flex; flex-direction:column; justify-content:flex-end; gap:12px; }
+  .tilt img { position:absolute; right:6px; top:4px; width:42%; height:auto; }
+  .big { font-weight:500; font-size:30px; line-height:1.07; letter-spacing:-.035em; }
+  .scores { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .score { border-radius:22px; padding:14px 16px; background:var(--ink); color:#fff; }
+  .score .mono { letter-spacing:.08em; white-space:nowrap; font-size:10px; }
+  .score b { display:block; font-weight:500; font-size:44px; letter-spacing:-.04em; line-height:1; margin-top:8px; }
+  .score.l { background:#fff; color:var(--ink); }
+  .dock { display:flex; align-items:center; background:var(--ink); color:#fff; border-radius:999px; padding:5px 5px 5px 20px; min-height:52px; font-weight:500; font-size:14px; }
+  .dock span { flex:1; } .dock i { width:42px; height:42px; border-radius:21px; background:var(--lime); color:var(--ink); display:grid; place-items:center; font-style:normal; }
+  .btn { appearance:none; border:0; width:100%; min-height:58px; border-radius:29px; background:var(--ink); color:#fff; font:500 17px "Outfit",system-ui,sans-serif; cursor:pointer; touch-action:manipulation; }
+  .btn.ghost { background:var(--chip); color:var(--ink); }
+  .rows { display:grid; gap:12px; }
+  .row { border-top:1px solid var(--line); padding-top:12px; display:grid; gap:4px; }
+  .row p { font-size:15px; line-height:1.35; }
+  .row .them { color:var(--soft); font-size:13px; }
+  .note { font-size:13px; line-height:1.5; color:rgba(11,11,12,.6); }
+  .note a { color:var(--ink); }
+  .hide { display:none !important; }
+</style>
+</head>
+<body>
+<main>
+  <header><p class="mono">SHROOMS · PSYCHE!</p><p class="mono chip" id="datechip"></p></header>
+  <div class="bar" id="bar" aria-hidden="true"></div>
+
+  <section id="play">
+    <div class="num"><b id="n">01</b><span>/ 05</span></div>
+    <p class="ask hide" id="ask"><i></i><span></span></p>
+    <h1 id="q"></h1>
+    <div class="doors">
+      <button class="door a" id="da" type="button"><span class="top"><span class="mono">Door one</span><span class="go" aria-hidden="true">↗</span></span><span class="label"></span></button>
+      <button class="door b" id="db" type="button"><span class="top"><span class="mono">Door two</span><span class="go" aria-hidden="true">↗</span></span><span class="label"></span></button>
+    </div>
+  </section>
+
+  <section id="result" class="hide" style="display:flex;flex-direction:column;gap:18px" aria-live="polite">
+    <div class="card">
+      <header><p class="mono">PSYCHE!</p><p class="mono chip" id="carddate"></p></header>
+      <div class="tilt">
+        <div class="tile">
+          <div class="scores hide" id="scores"></div>
+          <p class="big" id="rtitle"></p>
+        </div>
+        <img src="psyche-logo.png" alt="">
+      </div>
+      <div class="dock"><span id="dock">getshrooms.app</span><i aria-hidden="true">↗</i></div>
+    </div>
+    <button class="btn" id="share" type="button"></button>
+    <button class="btn ghost hide" id="own" type="button">Make your own five</button>
+    <p class="note" id="copied" aria-live="polite"></p>
+    <div class="rows" id="rows"></div>
+    <p class="note">Your picks travel only inside the link you send. Nothing is stored on a server, no account, no tracking. A new five every day.</p>
+    <p class="note">Psyche! is a small game from <a href="https://getshrooms.app">SHROOMS</a>, for people who don't know what they want yet. Find what you love &amp; make it happen.</p>
+  </section>
+</main>
+<script>
+(function () {
+  var ROUND = 5, FORKS = [], $ = function (id) { return document.getElementById(id); };
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function dayKey(d) { return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); }
+  function forksFor(key) {
+    var p = key.split("-").map(Number), day = Math.floor(Date.UTC(p[0], p[1] - 1, p[2]) / 86400000), n = FORKS.length;
+    var start = ((day * 7) % n + n) % n, out = [];
+    for (var i = 0; i < ROUND; i++) out.push(FORKS[(start + i) % n]);
+    return out;
+  }
+  function base() { return location.href.split("#")[0]; }
+
+  // a friend's link looks like #2026-11-23.abbab
+  var m = /^#(\d{4}-\d{2}-\d{2})\.([ab]{5})$/.exec(location.hash);
+  var friend = m ? m[2].split("") : null;
+  var key = m ? m[1] : dayKey(new Date());
+  var forks, mine = [], guesses = [], step = 0, guessing = !!friend;
+  $("datechip").textContent = key; $("carddate").textContent = key;
+
+  function render() {
+    var bar = $("bar"); bar.innerHTML = "";
+    for (var i = 0; i < ROUND; i++) { var el = document.createElement("i"); if (i < step) el.className = "on"; bar.appendChild(el); }
+    if (step >= ROUND) return finish();
+    var f = forks[step];
+    $("n").textContent = pad(step + 1);
+    $("ask").classList.toggle("hide", !friend);
+    $("ask").lastChild.textContent = guessing ? "What did your friend pick?" : "And you?";
+    $("q").textContent = f.q;
+    $("da").querySelector(".label").textContent = f.a;
+    $("db").querySelector(".label").textContent = f.b;
+  }
+  function choose(p) {
+    if (friend && guessing) { guesses[step] = p; guessing = false; }
+    else { mine[step] = p; step++; guessing = !!friend; }
+    render();
+  }
+  $("da").onclick = function () { choose("a"); };
+  $("db").onclick = function () { choose("b"); };
+
+  function row(lines) {
+    var r = document.createElement("div"); r.className = "row";
+    lines.forEach(function (l, i) { var p = document.createElement("p"); if (i) p.className = "them"; p.textContent = l; r.appendChild(p); });
+    $("rows").appendChild(r);
+  }
+  function finish() {
+    $("play").classList.add("hide");
+    $("result").classList.remove("hide");
+    $("rows").innerHTML = "";
+    var shareText, shareUrl = base() + "#" + key + "." + mine.join("");
+    if (friend) {
+      var read = 0, match = 0;
+      forks.forEach(function (f, i) {
+        if (guesses[i] === friend[i]) read++;
+        if (mine[i] === friend[i]) match++;
+        row([f.q, "They picked: " + f[friend[i]] + (guesses[i] === friend[i] ? "  ✓ you guessed it" : "  · you guessed " + f[guesses[i]]), "You picked: " + f[mine[i]]]);
+      });
+      $("scores").classList.remove("hide");
+      $("scores").innerHTML = '<div class="score"><span class="mono">You read them</span><b>' + read + '/5</b></div><div class="score l"><span class="mono">Chose alike</span><b>' + match + '/5</b></div>';
+      $("rtitle").textContent = read >= 4 ? "You really know them." : read >= 2 ? "You half know them." : "Psyche! They surprised you.";
+      $("dock").textContent = "Your turn: send yours back";
+      shareText = "Psyche! I read you " + read + " of 5. We chose alike " + match + " of 5. Can you guess mine?";
+      $("share").textContent = "Send yours back";
+      $("own").classList.remove("hide");
+    } else {
+      forks.forEach(function (f, i) { row([f[mine[i]]]); });
+      $("rtitle").textContent = "I made my five. Can you guess how I chose?";
+      $("dock").textContent = "Tap the link to play";
+      shareText = "Psyche! Can you guess how I chose? Five quick choices, one minute.";
+      $("share").textContent = "Send it to a friend";
+    }
+    $("share").onclick = function () {
+      if (navigator.share) { navigator.share({ text: shareText, url: shareUrl }).catch(function () {}); return; }
+      var all = shareText + " " + shareUrl;
+      (navigator.clipboard ? navigator.clipboard.writeText(all) : Promise.reject()).then(function () {
+        $("copied").textContent = "Link copied. Paste it to a friend.";
+      }, function () { $("copied").textContent = all; });
+    };
+  }
+  $("own").onclick = function () { location.href = base(); };
+
+  fetch("psyche-forks.json").then(function (r) { return r.json(); }).then(function (data) {
+    FORKS = data; forks = forksFor(key); render();
+  }).catch(function () { $("q").textContent = "Couldn't load today's five. Try again in a moment."; });
+})();
+</script>
+</body>
+</html>

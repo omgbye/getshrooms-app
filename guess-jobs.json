@@ -1,0 +1,509 @@
+[
+ {
+  "id": "cabinetmaker",
+  "title": "Cabinetmaker",
+  "area": "craft",
+  "tasks": [
+   "Read blueprints, shop drawings, and cut lists to plan woodworking steps",
+   "Operate table saws, jointers, routers, and edge-banders safely to mill lumber",
+   "Assemble face frames, dovetail drawers, and casework with glue, dowels, and fasteners"
+  ],
+  "summary": "You cut, shape, and assemble custom wooden cabinets, furniture, and built-in architectural storage.",
+  "wayIn": "Start as an entry-level shop helper or sander in a local custom cabinet shop",
+  "source": "https://www.bls.gov/ooh/production/woodworkers.htm"
+ },
+ {
+  "id": "custom-jeweler",
+  "title": "Custom Jeweler & Metalsmith",
+  "area": "craft",
+  "tasks": [
+   "Fabricate custom jewelry pieces from gold, platinum, and sterling silver using torches and hand tools",
+   "Carve wax models by hand or create 3D CAD models for lost-wax centrifugal casting",
+   "Set precious gemstones and diamonds into bezels, prongs, and channel mounts under magnification"
+  ],
+  "summary": "You fabricate, cast, shape, and repair rings, necklaces, and fine jewelry using precious metals and gemstones.",
+  "wayIn": "Apprentice at an established retail jeweler's bench or independent repair shop",
+  "source": "https://www.bls.gov/ooh/production/jewelers-and-precious-stone-and-metal-workers.htm"
+ },
+ {
+  "id": "leatherworker",
+  "title": "Leather Artisan & Cordwainer",
+  "area": "craft",
+  "tasks": [
+   "Select and inspect vegetable-tanned hides for grain consistency, thickness, and temper",
+   "Cut pattern pieces using rotary knives, clicker presses, and custom metal dies",
+   "Punch stitch holes and hand-saddle-stitch seams with waxed linen thread or heavy sewing machines"
+  ],
+  "summary": "You cut, stitch, dye, and shape heavy leathers into durable boots, saddles, belts, and bespoke carry goods.",
+  "wayIn": "Start as an apprentice or bench assistant in a shoe repair shop or saddlery",
+  "source": "https://www.bls.gov/ooh/production/shoe-and-leather-workers-and-repairers.htm"
+ },
+ {
+  "id": "ceramic-artist",
+  "title": "Ceramic Artist & Studio Potter",
+  "area": "craft",
+  "tasks": [
+   "Wedge, center, and throw clay vessels on a potter's wheel to precise weights and dimensions",
+   "Mix custom chemical glaze recipes using feldspar, silica, and metallic colorant oxides",
+   "Load, program, and fire electric, gas, or wood kilns to precise cone temperatures"
+  ],
+  "summary": "You throw, hand-build, glaze, and kiln-fire clay to create functional dinnerware, tiles, and sculptural pottery.",
+  "wayIn": "Take community studio pottery classes and become a studio monitor in exchange for kiln access",
+  "source": "https://www.bls.gov/ooh/arts-and-design/craft-and-fine-artists.htm"
+ },
+ {
+  "id": "scientific-glassblower",
+  "title": "Scientific & Studio Glassblower",
+  "area": "craft",
+  "tasks": [
+   "Manipulate borosilicate and quartz glass tubes over benchtop gas-oxygen torches and glass lathes",
+   "Blow and shape custom condenser coils, vacuum manifolds, and distillation flasks to strict blueprints",
+   "Anneal finished glass instruments in programmable kilns to eliminate thermal stress"
+  ],
+  "summary": "You shape, blow, and fuse molten borosilicate glass tubing with specialized torches to build precision laboratory apparatus and artistic glassware.",
+  "wayIn": "Complete the Scientific Glass Technology degree program (such as Salem Community College)",
+  "source": "https://www.onetonline.org/link/details/51-9195.04"
+ },
+ {
+  "id": "musical-instrument-repairer",
+  "title": "Musical Instrument Repairer & Luthier",
+  "area": "craft",
+  "tasks": [
+   "Diagnose acoustic and mechanical problems such as buzzing frets, cracked soundboards, and air leaks",
+   "Level and crown guitar frets, carve bone nuts and saddles, and adjust string action",
+   "Re-pad brass and woodwind keys, adjust pad seating, and regulate mechanical linkages"
+  ],
+  "summary": "You build, repair, tune, and restore acoustic and electric musical instruments made of tonewoods and brass.",
+  "wayIn": "Attend a specialized guitar-building or brass-repair vocational school",
+  "source": "https://www.bls.gov/ooh/installation-maintenance-and-repair/musical-instrument-repairers-and-tuners.htm"
+ },
+ {
+  "id": "architectural-blacksmith",
+  "title": "Architectural Metal Fabricator & Blacksmith",
+  "area": "craft",
+  "tasks": [
+   "Heat steel bars to forging temperatures in gas or coal forges and shape them on anvils and power hammers",
+   "Cut and fit steel tubes, angles, and plates using horizontal bandsaws and plasma torches",
+   "TIG and MIG weld structural joints to sound architectural welding standards"
+  ],
+  "summary": "You forge, heat, bend, and weld raw iron and steel into architectural railings, gates, fireplace screens, and custom metalwork.",
+  "wayIn": "Start as an entry-level fabricator or grinder in an ornamental iron shop",
+  "source": "https://www.bls.gov/ooh/production/welders-cutters-solderers-and-brazers.htm"
+ },
+ {
+  "id": "bespoke-tailor",
+  "title": "Bespoke Tailor & Custom Clothier",
+  "area": "craft",
+  "tasks": [
+   "Take dozens of anatomical body measurements and evaluate customer posture and stance",
+   "Draft custom paper patterns from scratch tailored to the client's exact measurements",
+   "Hand-pad floating canvas chest pieces, shape lapels with steam irons, and hand-sew buttonholes"
+  ],
+  "summary": "You draft unique individual garment patterns, cut fine suiting fabrics, and construct bespoke suits and custom garments by hand.",
+  "wayIn": "Apprentice at an established bespoke tailoring house or alteration atelier",
+  "source": "https://www.onetonline.org/link/details/51-6052.00"
+ },
+ {
+  "id": "electrician",
+  "title": "Electrician",
+  "area": "trades",
+  "tasks": [
+   "Read electrical schematics and blueprints to lay out circuits, outlets, and panel locations",
+   "Bend and run metallic conduit and pull insulated copper wiring through walls and ceilings",
+   "Connect circuit breakers, transformers, switchgear, and safety ground systems"
+  ],
+  "summary": "You install, test, and repair electrical wiring, lighting fixtures, circuit breaker panels, and control equipment in buildings.",
+  "wayIn": "Apply to a union (IBEW/NECA) or non-union (IEC/ABC) paid 4-to-5 year electrical apprenticeship",
+  "source": "https://www.bls.gov/ooh/construction-and-extraction/electricians.htm"
+ },
+ {
+  "id": "plumber-pipefitter",
+  "title": "Plumber & Pipefitter",
+  "area": "trades",
+  "tasks": [
+   "Study building plans and architectural drawings to lay out supply lines, waste pipes, and vent stacks",
+   "Cut, ream, thread, and join copper, PEX, cast iron, and PVC pipes using solders, presses, and solvent cements",
+   "Install plumbing fixtures including sinks, water heaters, backflow preventers, and commercial boilers"
+  ],
+  "summary": "You assemble, install, and repair piping systems that bring clean water, gas, and drainage to buildings.",
+  "wayIn": "Join a United Association (UA) union or PHCC non-union 4-to-5 year apprenticeship program",
+  "source": "https://www.bls.gov/ooh/construction-and-extraction/plumbers-pipefitters-and-steamfitters.htm"
+ },
+ {
+  "id": "hvac-technician",
+  "title": "HVAC/R Technician",
+  "area": "trades",
+  "tasks": [
+   "Install heat pumps, furnaces, air handlers, condensers, and ductwork according to load calculations",
+   "Test electrical circuits, capacitors, blower motors, and thermostats for operational faults",
+   "Evacuate, recover, and recharge fluorocarbon refrigerants to strict EPA Clean Air standards"
+  ],
+  "summary": "You install, maintain, and overhaul heating, ventilation, air conditioning, and refrigeration systems in homes and businesses.",
+  "wayIn": "Complete a 6-to-12 month HVAC certificate at a technical college",
+  "source": "https://www.bls.gov/ooh/installation-maintenance-and-repair/heating-air-conditioning-and-refrigeration-mechanics-and-installers.htm"
+ },
+ {
+  "id": "solar-installer",
+  "title": "Solar Photovoltaic Installer",
+  "area": "trades",
+  "tasks": [
+   "Measure roof planes and install weather-tight flashing and structural aluminum mounting rails",
+   "Secure solar PV modules, microinverters, and DC optimizers to the racking hardware",
+   "Route and clip DC electrical wiring along conduits down to inverter equipment and disconnect boxes"
+  ],
+  "summary": "You assemble, install, and maintain rooftop and ground-mounted solar panels that convert sunlight into clean electricity.",
+  "wayIn": "Apply directly to regional solar installation companies as an entry-level roof technician",
+  "source": "https://www.bls.gov/ooh/construction-and-extraction/solar-photovoltaic-installers.htm"
+ },
+ {
+  "id": "wind-turbine-technician",
+  "title": "Wind Turbine Technician",
+  "area": "trades",
+  "tasks": [
+   "Climb internal vertical turbine ladders wearing full body fall-arrest harnesses to reach the nacelle",
+   "Troubleshoot electrical pitch systems, yaw drives, and hydraulic brakes using computer diagnostic tablets",
+   "Perform scheduled mechanical maintenance including oil changes, bearing greasing, and bolt torque checks"
+  ],
+  "summary": "You climb 300-foot wind towers to inspect, service, and repair giant turbine blades, gearboxes, and electrical generators.",
+  "wayIn": "Complete a 1-to-2 year wind energy technology certificate or associate degree program",
+  "source": "https://www.bls.gov/ooh/installation-maintenance-and-repair/wind-turbine-technicians.htm"
+ },
+ {
+  "id": "auto-body-restorer",
+  "title": "Automotive Body & Custom Restorer",
+  "area": "trades",
+  "tasks": [
+   "Straighten bent vehicle unibody frames using computer-guided laser measuring benches and hydraulic pullers",
+   "Hammer, dolly, and shape steel and aluminum body panels to restore original factory body lines",
+   "Mix body fillers, sand surfaces through graduating grits, and apply epoxy primer surfacers"
+  ],
+  "summary": "You repair damaged vehicle frames, straighten sheet metal panels, and apply flawless custom paint finishes.",
+  "wayIn": "Complete a collision repair and refinishing diploma at a community or technical college",
+  "source": "https://www.bls.gov/ooh/installation-maintenance-and-repair/automotive-body-and-glass-repairers.htm"
+ },
+ {
+  "id": "heavy-equipment-operator",
+  "title": "Heavy Equipment Operator",
+  "area": "trades",
+  "tasks": [
+   "Inspect machinery fluid levels, track tension, hydraulic rams, and safety interlocks daily",
+   "Excavate building footings, utility trenches, and basement pits to strict GPS grade stakes",
+   "Backfill, grade, and compact soil layers to precise density and sub-base specifications"
+  ],
+  "summary": "You operate excavators, bulldozers, wheel loaders, and motor graders to shape the earth for highways, bridges, and building foundations.",
+  "wayIn": "Join the International Union of Operating Engineers (IUOE) 3-to-4 year paid apprenticeship program",
+  "source": "https://www.bls.gov/ooh/construction-and-extraction/construction-equipment-operators.htm"
+ },
+ {
+  "id": "commercial-diver",
+  "title": "Commercial Diver & Underwater Technician",
+  "area": "trades",
+  "tasks": [
+   "Don heavy diving helmets and surface-supplied air umbilical hoses connected to dive support tenders",
+   "Perform underwater wet welding and burning on offshore oil rigs, bridge pilings, and ships",
+   "Inspect subsea pipelines and harbor retaining walls using underwater ultrasonic non-destructive testing tools"
+  ],
+  "summary": "You dive beneath oceans, rivers, and harbors using surface-supplied air gear to weld, inspect, and construct marine structures.",
+  "wayIn": "Graduate from an accredited commercial diving academy (such as Diver's Academy or Santa Barbara City College)",
+  "source": "https://www.onetonline.org/link/details/49-9092.00"
+ },
+ {
+  "id": "arborist",
+  "title": "Certified Arborist & Tree Care Specialist",
+  "area": "outdoors",
+  "tasks": [
+   "Ascend tall forest and urban trees using dynamic ropes, friction hitches, and mechanical ascenders",
+   "Prune deadwood, thin heavy tree canopies, and eliminate structural hazards using handsaws and chainsaws",
+   "Rig and lower heavy branches with friction bollards and pulleys to avoid damaging houses below"
+  ],
+  "summary": "You climb, prune, preserve, and safely remove mature trees using ropes, saddles, and specialized rigging systems.",
+  "wayIn": "Start as an entry-level ground technician dragging brush, operating chippers, and managing rigging ropes",
+  "source": "https://www.bls.gov/ooh/building-and-grounds-cleaning/grounds-maintenance-workers.htm"
+ },
+ {
+  "id": "wildlife-biologist",
+  "title": "Wildlife Biologist & Field Ecologist",
+  "area": "outdoors",
+  "tasks": [
+   "Track animal movements across wilderness habitats using GPS radio telemetry collars and camera traps",
+   "Collect biological samples, genetic hair snares, and health measurements from captured wildlife safely",
+   "Analyze spatial habitat data using Geographic Information Systems (GIS) software to model population trends"
+  ],
+  "summary": "You study wild animal populations, track migrations, monitor endangered species, and manage natural ecosystems.",
+  "wayIn": "Earn a Bachelor of Science in wildlife biology, zoology, or ecology",
+  "source": "https://www.bls.gov/ooh/life-physical-and-social-science/zoologists-and-wildlife-biologists.htm"
+ },
+ {
+  "id": "veterinary-technician",
+  "title": "Veterinary Technician",
+  "area": "outdoors",
+  "tasks": [
+   "Restrain companion and large animals safely and humanely for clinical examinations and treatments",
+   "Place intravenous (IV) catheters, administer medications, and draw blood for clinical pathology tests",
+   "Induce, intubate, and monitor surgical patients under general anesthesia using pulse oximeters and EKGs"
+  ],
+  "summary": "You provide hands-on medical care, anesthesia monitoring, dental cleanings, and diagnostic lab work for animals under a veterinarian.",
+  "wayIn": "Graduate from an AVMA-accredited 2-year veterinary technology associate degree program and pass the VTNE",
+  "source": "https://www.bls.gov/ooh/healthcare/veterinary-technologists-and-technicians.htm"
+ },
+ {
+  "id": "park-ranger",
+  "title": "Park Ranger & Interpretive Naturalist",
+  "area": "outdoors",
+  "tasks": [
+   "Lead guided interpretive hikes, campfire talks, and educational school programs on ecology and history",
+   "Patrol backcountry trails, campgrounds, and waterways to assist lost visitors and enforce park rules",
+   "Coordinate wilderness search-and-rescue operations and administer backcountry first aid"
+  ],
+  "summary": "You protect public parks, lead educational nature programs, patrol wilderness trails, and preserve natural and cultural resources.",
+  "wayIn": "Earn a degree in parks and recreation management, environmental studies, or forestry",
+  "source": "https://www.bls.gov/ooh/life-physical-and-social-science/conservation-scientists-and-foresters.htm"
+ },
+ {
+  "id": "apiary-manager",
+  "title": "Commercial Beekeeper & Apiary Manager",
+  "area": "outdoors",
+  "tasks": [
+   "Open hive bodies wearing protective bee veils to inspect brood health, egg laying, and honey reserves",
+   "Diagnose and treat colonies for Varroa destructor mites, hive beetles, and bacterial foulbrood diseases",
+   "Migrate flatbed truckloads of bee hives across states to pollinate almond, apple, and blueberry orchards"
+  ],
+  "summary": "You manage hundreds of honeybee colonies, breed resilient queens, provide crop pollination services, and harvest artisanal honey.",
+  "wayIn": "Work as a seasonal apiary assistant for a commercial migratory beekeeping outfit",
+  "source": "https://www.bls.gov/ooh/management/farmers-ranchers-and-other-agricultural-managers.htm"
+ },
+ {
+  "id": "dog-trainer",
+  "title": "Professional Dog Trainer & Canine Behaviorist",
+  "area": "outdoors",
+  "tasks": [
+   "Assess canine body language, stress signals, and environmental triggers during behavioral intake evaluations",
+   "Apply positive-reinforcement conditioning protocols to shape desired manners and leash walking",
+   "Design and execute desensitization plans for severe reactivity, separation anxiety, and resource guarding"
+  ],
+  "summary": "You teach dogs obedience and working skills while coaching pet owners to resolve fear, anxiety, and aggression humanely.",
+  "wayIn": "Apprentice with an established certified positive-reinforcement dog trainer",
+  "source": "https://www.bls.gov/ooh/personal-care-and-service/animal-care-and-service-workers.htm"
+ },
+ {
+  "id": "environmental-restoration-specialist",
+  "title": "Environmental Restoration Specialist",
+  "area": "outdoors",
+  "tasks": [
+   "Assess degraded rivers, contaminated post-industrial soils, and mined lands through field soil and water sampling",
+   "Design bioengineered stream bank stabilization plans using root wads, native willow plantings, and stone weirs",
+   "Eradicate invasive plant monocultures and supervise large-scale native seeding and tree planting operations"
+  ],
+  "summary": "You design and manage field projects that heal damaged ecosystems, rebuild eroded stream banks, and restore native wetlands.",
+  "wayIn": "Earn a bachelor's degree in environmental science, ecological restoration, biology, or hydrology",
+  "source": "https://www.bls.gov/ooh/life-physical-and-social-science/environmental-scientists-and-specialists.htm"
+ },
+ {
+  "id": "commercial-fisher",
+  "title": "Commercial Fisher & Vessel Captain",
+  "area": "outdoors",
+  "tasks": [
+   "Navigate coastal waters and open ocean fishing banks using radar, sonar fish-finders, and GPS chartplotters",
+   "Deploy, haul, and mend purse seines, gillnets, crab pots, and longlines using hydraulic deck winches",
+   "Sort, bleed, gut, and ice wild fish and shellfish on rolling decks to preserve sushi-grade seafood quality"
+  ],
+  "summary": "You operate commercial fishing vessels, deploy specialized nets and pots, and harvest wild seafood from ocean waters.",
+  "wayIn": "Walk the commercial docks in coastal fishing harbors (Alaska, New England, Gulf Coast) seeking deckhand berths",
+  "source": "https://www.bls.gov/ooh/farming-fishing-and-forestry/fishers-and-related-fishing-workers.htm"
+ },
+ {
+  "id": "architect",
+  "title": "Architect",
+  "area": "built",
+  "tasks": [
+   "Meet with clients to determine building functional needs, programmatic spaces, and project budgets",
+   "Develop conceptual schematic designs, digital 3D massing models, and photorealistic renderings",
+   "Draft detailed construction documents and architectural specifications using Building Information Modeling (BIM)"
+  ],
+  "summary": "You conceive, design, and detail safe, beautiful, and sustainable buildings and oversee their construction.",
+  "wayIn": "Complete a 5-year NAAB-accredited Bachelor of Architecture (B.Arch) or a Master of Architecture (M.Arch)",
+  "source": "https://www.bls.gov/ooh/architecture-and-engineering/architects.htm"
+ },
+ {
+  "id": "landscape-architect",
+  "title": "Landscape Architect",
+  "area": "built",
+  "tasks": [
+   "Analyze site ecology, soil hydrology, prevailing winds, and human pedestrian circulation patterns",
+   "Prepare site master plans, grading and drainage drawings, and planting schedules of native species",
+   "Specify hardscape materials including permeable pavers, stone retaining walls, water features, and outdoor lighting"
+  ],
+  "summary": "You plan and design outdoor spaces including public parks, botanical gardens, residential campuses, and waterfront promenades.",
+  "wayIn": "Earn a LAAB-accredited Bachelor of Landscape Architecture (BLA) or Master of Landscape Architecture (MLA)",
+  "source": "https://www.bls.gov/ooh/architecture-and-engineering/landscape-architects.htm"
+ },
+ {
+  "id": "interior-designer",
+  "title": "Interior Designer",
+  "area": "built",
+  "tasks": [
+   "Draft space-planning floor plans and interior architectural elevations meeting ADA accessibility guidelines",
+   "Select and specify flooring, wall finishes, architectural lighting, textiles, and custom millwork",
+   "Produce detailed finish schedules and construction documentation for general contractors and permit reviews"
+  ],
+  "summary": "You design functional, safe, and beautiful interior architectural spaces, selecting layouts, materials, lighting, and furnishings.",
+  "wayIn": "Earn a CIDA-accredited Bachelor of Fine Arts (BFA) or Bachelor of Science in Interior Design",
+  "source": "https://www.bls.gov/ooh/arts-and-design/interior-designers.htm"
+ },
+ {
+  "id": "urban-planner",
+  "title": "Urban & Regional Planner",
+  "area": "built",
+  "tasks": [
+   "Analyze demographic census data, traffic flow models, and geographic information system (GIS) maps",
+   "Review commercial and residential development proposals for zoning, environmental, and infrastructure compliance",
+   "Facilitate public town halls and community stakeholder meetings to gather citizen input on neighborhood plans"
+  ],
+  "summary": "You develop comprehensive land use plans, transit corridors, and zoning policies that shape how cities grow sustainably.",
+  "wayIn": "Earn a Master of Urban Planning (MUP) or Master of City and Regional Planning (MCRP) from a PAB-accredited university",
+  "source": "https://www.bls.gov/ooh/life-physical-and-social-science/urban-and-regional-planners.htm"
+ },
+ {
+  "id": "land-surveyor",
+  "title": "Land Surveyor & Geomatics Specialist",
+  "area": "built",
+  "tasks": [
+   "Operate robotic total stations, survey-grade GNSS receivers, and terrestrial LiDAR 3D scanners in the field",
+   "Research historical deed records, courthouse title registries, and boundary survey archives for property evidence",
+   "Locate and verify buried iron property pins, brass boundary monuments, and stone land markers"
+  ],
+  "summary": "You determine exact legal property boundaries, measure geographic elevations, and map land using GPS, robotic total stations, and drones.",
+  "wayIn": "Earn a bachelor's or associate degree in surveying engineering, geomatics, or civil engineering",
+  "source": "https://www.bls.gov/ooh/architecture-and-engineering/surveyors.htm"
+ },
+ {
+  "id": "construction-manager",
+  "title": "Construction Manager & General Contractor",
+  "area": "built",
+  "tasks": [
+   "Prepare cost estimates, budgets, and project timelines using critical path method (CPM) scheduling software",
+   "Negotiate and award trade subcontracts for electrical, plumbing, framing, concrete, and mechanical packages",
+   "Supervise daily on-site progress, enforcing OSHA safety protocols and quality control standards"
+  ],
+  "summary": "You oversee construction projects from foundation to finish, coordinating trade crews, budgets, building schedules, and safety.",
+  "wayIn": "Earn a Bachelor of Science in Construction Management, Building Science, or Civil Engineering",
+  "source": "https://www.bls.gov/ooh/construction-and-extraction/construction-managers.htm"
+ },
+ {
+  "id": "historic-preservationist",
+  "title": "Historic Preservation Specialist",
+  "area": "built",
+  "tasks": [
+   "Conduct archival architectural research using historic insurance maps, building blueprints, and historical photographs",
+   "Analyze historical mortar compositions, hand-hewn timbers, and historic lime plaster for material compatibility",
+   "Draft Historic Structure Reports and National Register of Historic Places nomination dossiers"
+  ],
+  "summary": "You research, document, and restore landmark historic buildings, preserving architectural heritage for future generations.",
+  "wayIn": "Earn a Master's degree in Historic Preservation, Architectural History, or Materials Conservation",
+  "source": "https://www.bls.gov/ooh/life-physical-and-social-science/historians.htm"
+ },
+ {
+  "id": "lighting-designer",
+  "title": "Architectural Lighting Designer",
+  "area": "built",
+  "tasks": [
+   "Develop creative lighting concepts, fixture placement strategies, and night-time architectural renderings",
+   "Perform photometric calculations using software like AGi32 and DIALux to ensure safe foot-candle illumination levels",
+   "Specify LED fixtures, beam optics, color temperatures (CCT), and color rendering index (CRI) requirements"
+  ],
+  "summary": "You design lighting systems for buildings, facades, monuments, and bridges that balance visual drama, human circadian rhythms, and energy efficiency.",
+  "wayIn": "Earn a bachelor's degree in architectural engineering, theatrical lighting design, or interior architecture",
+  "source": "https://www.bls.gov/ooh/arts-and-design/commercial-and-industrial-designers.htm"
+ },
+ {
+  "id": "executive-chef",
+  "title": "Executive Chef & Culinary Director",
+  "area": "food",
+  "tasks": [
+   "Develop innovative seasonal menus and plate presentations that balance culinary artistry with food cost margins",
+   "Expedite high-volume service on the pass, tasting sauces and ensuring every dish meets presentation standards",
+   "Manage kitchen food purchasing, inventory waste controls, and purveyor vendor contracts"
+  ],
+  "summary": "You direct all kitchen operations, invent seasonal tasting menus, source fine local ingredients, and lead brigade culinary teams.",
+  "wayIn": "Work your way up through the kitchen brigade: prep cook, line cook, saucier, sous chef, to head chef",
+  "source": "https://www.bls.gov/ooh/food-preparation-and-serving/chefs-and-head-cooks.htm"
+ },
+ {
+  "id": "artisan-baker",
+  "title": "Artisan Baker & Pastry Chef",
+  "area": "food",
+  "tasks": [
+   "Manage wild-yeast sourdough starters, calculating baker's percentages, dough hydration, and fermentation timetables",
+   "Laminate butter into croissant doughs using commercial dough sheeters to create dozens of flaky pastry layers",
+   "Hand-shape baguettes, boules, and brioches and score decorative patterns with baker's razor lames"
+  ],
+  "summary": "You mix, ferment, shape, and bake sourdough breads, laminated viennoiserie pastries, and celebratory baked goods.",
+  "wayIn": "Start as an early morning baker's assistant or mixing apprentice at a local craft sourdough bakery",
+  "source": "https://www.bls.gov/ooh/food-preparation-and-serving/bakers.htm"
+ },
+ {
+  "id": "food-truck-operator",
+  "title": "Food Truck Owner-Operator",
+  "area": "food",
+  "tasks": [
+   "Prep specialized menu items inside licensed commissary kitchens following food sanitation protocols",
+   "Drive, park, and set up a commercial mobile kitchen trailer including propane lines, water tanks, and generators",
+   "Cook on high-output flat-top grills and fryers in tight quarters during high-velocity lunch and dinner rushes"
+  ],
+  "summary": "You own and run a mobile kitchen business, serving fast scratch-made street food at festivals, breweries, and pop-ups.",
+  "wayIn": "Work on an active food truck as a line cook or window cashier to understand mobile logistics and flow",
+  "source": "https://www.bls.gov/ooh/management/food-service-managers.htm"
+ },
+ {
+  "id": "artisan-butcher",
+  "title": "Artisan Butcher & Charcutier",
+  "area": "food",
+  "tasks": [
+   "Perform whole-animal seam butchery along muscle groups using boning knives, cleavers, and meat band saws",
+   "Grind, season, and stuff artisanal sausages, salamis, and terrines into natural casings",
+   "Monitor temperature and humidity inside curing chambers to dry-cure prosciuttos, bresaola, and coppa"
+  ],
+  "summary": "You break down whole pasture-raised animal carcasses into prime retail cuts, hand-craft sausages, and cure charcuterie.",
+  "wayIn": "Apprentice at an independent whole-animal craft butcher shop or farm-based meat processor",
+  "source": "https://www.bls.gov/ooh/production/butchers.htm"
+ },
+ {
+  "id": "event-planner",
+  "title": "Event & Experience Producer",
+  "area": "food",
+  "tasks": [
+   "Establish master event concepts, production timelines, audiovisual requirements, and detailed budget ledgers",
+   "Negotiate and contract event venues, caterers, lighting vendors, entertainers, and rental suppliers",
+   "Design floor plans, crowd flows, catering service stations, and emergency egress routes complying with fire codes"
+  ],
+  "summary": "You conceptualize, coordinate, and produce large-scale festivals, luxury weddings, culinary galas, and corporate conferences.",
+  "wayIn": "Earn a degree in hospitality management, communications, public relations, or marketing",
+  "source": "https://www.bls.gov/ooh/business-and-financial/meeting-convention-and-event-planners.htm"
+ },
+ {
+  "id": "food-safety-inspector",
+  "title": "Food Safety & Quality Inspector",
+  "area": "food",
+  "tasks": [
+   "Inspect food manufacturing equipment, slaughter facilities, and cold storage warehouses for sanitary compliance",
+   "Collect microbial swab and food product samples to test for Salmonella, E. coli, and Listeria pathogens",
+   "Audit Hazard Analysis Critical Control Point (HACCP) logs, pasteurization charts, and allergen segregation protocols"
+  ],
+  "summary": "You inspect commercial food processing plants, farms, and restaurant facilities to ensure food products are sanitary, safe, and free of contamination.",
+  "wayIn": "Earn a degree in food science, microbiology, agricultural biology, or public health",
+  "source": "https://www.bls.gov/ooh/farming-fishing-and-forestry/agricultural-workers.htm"
+ },
+ {
+  "id": "specialty-coffee-roaster",
+  "title": "Specialty Coffee Roaster & Q Grader",
+  "area": "food",
+  "tasks": [
+   "Inspect green coffee beans for moisture content, screen size, density, and agricultural defects",
+   "Program roast curve profiles on commercial drum roasters, monitoring rate-of-rise (RoR) and airflow temperature",
+   "Evaluate roasted batches through standardized cupping protocols, scoring aroma, acidity, body, and sweetness"
+  ],
+  "summary": "You source green coffee beans from global origins and roast them on drum roasters to unlock distinct origin flavors.",
+  "wayIn": "Start as a barista in a specialty third-wave coffee shop and transition into the roasting production room as a packaging assistant",
+  "source": "https://www.bls.gov/ooh/production/food-processing-operators.htm"
+ }
+]
