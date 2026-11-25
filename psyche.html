@@ -7,7 +7,7 @@
 <meta name="description" content="Five quick choices. Can your friends guess yours?">
 <meta property="og:title" content="Psyche! · SHROOMS">
 <meta property="og:description" content="Five quick choices. Can you guess how your friend chose?">
-<meta name="theme-color" content="#e8e8e4">
+<meta name="theme-color" content="#060607">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&family=Space+Mono&display=swap" rel="stylesheet">
@@ -69,6 +69,35 @@
   .note a { color:var(--ink); }
   .hide { display:none !important; }
 </style>
+<style>
+  /* getshrooms.app hosting skin (Muse, Nov 25): SHROOMS brand stage, black glass and lime,
+     tie-dye glows from the eye (blue for career, warm for life). Game code untouched. */
+  :root { --lime:#c5fd04; --soft:rgba(240,240,235,.55); --line:rgba(255,255,255,.14); --chip:rgba(255,255,255,.07); }
+  body { color:#f2f2ed; background:#060607; }
+  body::before { content:""; position:fixed; inset:0; z-index:-1; pointer-events:none; background:
+    radial-gradient(60% 45% at 88% -5%, rgba(64,140,255,.40), rgba(64,140,255,0) 70%),
+    radial-gradient(55% 42% at -12% 102%, rgba(255,150,60,.30), rgba(255,150,60,0) 70%),
+    radial-gradient(42% 30% at 50% 118%, rgba(197,253,4,.15), rgba(197,253,4,0) 70%), #060607; }
+  .chip { background:var(--chip); border:1px solid var(--line); }
+  .bar i { background:rgba(255,255,255,.18); }
+  .card { background:rgba(255,255,255,.05); }
+  .tile { color:#0b0b0c; }
+  .dock { border:1px solid var(--line); }
+  .btn { background:var(--lime); color:#0b0b0c; }
+  .btn.ghost { background:var(--chip); color:#f2f2ed; border:1px solid var(--line); }
+  .note { color:rgba(240,240,235,.62); }
+  .note a { color:var(--lime); }
+  .promo { border:1px solid var(--line); background:rgba(255,255,255,.05); border-radius:30px; padding:22px 20px; display:flex; flex-direction:column; gap:10px; }
+  .promo .mono { color:var(--lime); }
+  .promo h2 { font-weight:500; font-size:24px; line-height:1.15; letter-spacing:-.02em; }
+  .promo p { font-size:14px; line-height:1.5; color:rgba(240,240,235,.72); }
+  .promo-btn { appearance:none; text-decoration:none; text-align:center; min-height:52px; border-radius:26px; background:var(--lime); color:#0b0b0c; font:500 16px "Outfit",system-ui,sans-serif; display:flex; align-items:center; justify-content:center; margin-top:4px; }
+
+  .bar i.on { background:var(--lime); }
+  .ask { border:1px solid var(--line); }
+  .door.a { box-shadow:0 14px 44px rgba(197,253,4,.16); }
+  .door.b { border:1px solid rgba(255,255,255,.18); }
+</style>
 </head>
 <body>
 <main>
@@ -104,6 +133,13 @@
     <p class="note">Your picks travel only inside the link you send. Nothing is stored on a server, no account, no tracking. A new five every day.</p>
     <p class="note">Psyche! is a small game from <a href="https://getshrooms.app">SHROOMS</a>, for people who don't know what they want yet. Find what you love &amp; make it happen.</p>
   </section>
+
+  <aside class="promo">
+    <p class="mono">From the app</p>
+    <h2>The most interesting thing on your phone might be yourself.</h2>
+    <p>SHROOMS is an AI coach for purpose, career and the life you actually want. Find what you love &amp; make it happen.</p>
+    <a class="promo-btn" href="https://getshrooms.app">Get early access</a>
+  </aside>
 </main>
 <script>
 (function () {
