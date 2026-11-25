@@ -97,12 +97,27 @@
   .ask { border:1px solid var(--line); }
   .door.a { box-shadow:0 14px 44px rgba(197,253,4,.16); }
   .door.b { border:1px solid rgba(255,255,255,.18); }
+
+  /* Hero (Muse, Nov 25, at Angel's direction): the word SHROOMS large on top, Play now. */
+  .hero { display:flex; flex-direction:column; gap:10px; padding:24px 2px 4px; }
+  .hero .mono { color:var(--lime); }
+  .wordmark { font-weight:500; font-size:clamp(58px,17vw,92px); line-height:.95; letter-spacing:-.045em; color:#f2f2ed; text-shadow:0 0 34px rgba(197,253,4,.28); }
+  .hero-sub { font-size:16px; line-height:1.45; color:rgba(240,240,235,.75); max-width:36ch; }
+  .playnow { appearance:none; border:0; cursor:pointer; margin-top:8px; min-height:60px; border-radius:30px; background:var(--lime); color:#0b0b0c; font:500 18px "Outfit",system-ui,sans-serif; box-shadow:0 14px 44px rgba(197,253,4,.25); touch-action:manipulation; }
+  .playnow:active { transform:scale(.98); }
 </style>
 </head>
 <body>
 <main>
   <header><p class="mono">SHROOMS · PSYCHE!</p><p class="mono chip" id="datechip"></p></header>
   <div class="bar" id="bar" aria-hidden="true"></div>
+  <section class="hero" id="hero">
+    <p class="mono">A game from</p>
+    <p class="wordmark">SHROOMS</p>
+    <p class="hero-sub">Psyche! Five quick choices. Can your friends guess yours?</p>
+    <button class="playnow" id="playnow" type="button">Play now</button>
+  </section>
+
 
   <section id="play">
     <div class="num"><b id="n">01</b><span>/ 05</span></div>
@@ -138,7 +153,7 @@
     <p class="mono">From the app</p>
     <h2>The most interesting thing on your phone might be yourself.</h2>
     <p>SHROOMS is an AI coach for purpose, career and the life you actually want. Find what you love &amp; make it happen.</p>
-    <a class="promo-btn" href="https://getshrooms.app">Get early access</a>
+    <a class="promo-btn" href="https://getshrooms.app">Download the app</a>
   </aside>
 </main>
 <script>
@@ -226,6 +241,12 @@
     FORKS = data; forks = forksFor(key); render();
   }).catch(function () { $("q").textContent = "Couldn't load today's five. Try again in a moment."; });
 })();
+</script>
+
+<script>
+/* Hero dismiss (Muse, Nov 25). The builders' game script is untouched. */
+(function () { var b = document.getElementById("playnow"), h = document.getElementById("hero");
+  if (b && h) b.addEventListener("click", function () { h.classList.add("hide"); window.scrollTo({ top: 0, behavior: "smooth" }); }); })();
 </script>
 </body>
 </html>
