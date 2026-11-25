@@ -1,4 +1,8 @@
 User-agent: *
+Disallow: /psyche.html
+Disallow: /guess.html
+Disallow: /psyche-forks.json
+Disallow: /guess-jobs.json
 Allow: /
 
 Sitemap: https://getshrooms.app/sitemap.xml
